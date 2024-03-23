@@ -31,3 +31,8 @@ const setCount = (count = 0) => {
   window.localStorage.setItem(ROW_COUNTER_KEY, count);
   document.getElementById("current-row").innerHTML = count;
 };
+
+window.onload = () => {
+  const count = getCount();
+  setCount(count);
+};
