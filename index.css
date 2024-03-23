@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  margin: 10rem auto;
+  margin: 5rem auto;
   text-align: center;
 }
 
@@ -13,4 +13,8 @@
   align-items: center;
   margin: 1rem;
   font-size: 2rem;
+}
+
+.reset-button-wrapper {
+  width: 100%;
 }

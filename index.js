@@ -32,7 +32,16 @@ const setCount = (count = 0) => {
   document.getElementById("current-row").innerHTML = count;
 };
 
+const resetCount = () => {
+  setCount(0);
+};
+
 window.onload = () => {
   const count = getCount();
   setCount(count);
 };
+
+window.addEventListener("keydown", (event) => {
+  if (event.code === "Enter" || event.code === "Space") increaseCount();
+  if (event.code === "Escape") decreaseCount();
+});
