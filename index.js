@@ -28,8 +28,10 @@ const getCount = () => {
 };
 
 const setCount = (count = 0) => {
-  window.localStorage.setItem(ROW_COUNTER_KEY, count);
-  document.getElementById("current-row").innerHTML = count;
+  const resetCount = count % 10;
+
+  window.localStorage.setItem(ROW_COUNTER_KEY, resetCount);
+  document.getElementById("current-row").innerHTML = resetCount;
 };
 
 const resetCount = () => {
@@ -42,6 +44,7 @@ window.onload = () => {
 };
 
 window.addEventListener("keydown", (event) => {
+  event.preventDefault();
   if (event.code === "Enter" || event.code === "Space") increaseCount();
   if (event.code === "Escape") decreaseCount();
 });
